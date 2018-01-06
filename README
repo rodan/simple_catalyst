@@ -9,11 +9,17 @@ SYNOPSIS
       voila, the iso is ready.
 
 DESCRIPTION
-
 	after using catalyst [1] for the last few years I got tired to keep patching every new version of it with the changes I needed, so i wrote a much simplified tool that does the job of creating a small livecd iso image.
 	does not support cross-compiling, multiple loop types or multiple bootloaders nor does it compile a kernel for you. it just takes a stage3 image and a portage snapshot, a few spec files as input and compiles whatever packages are specified, cleans up things and provides the iso. magic, I tell you.
 
 [1] https://wiki.gentoo.org/wiki/Catalyst
+
+DEPENDENCIES
+    app-shells/bash
+    sys-fs/squashfs-tools
+    app-cdr/cdrtools
+    app-arch/cpio
+    app-arch/xz-utils
 
 AUTHORS
     Petre Rodan <c59ccef70aa1387612c4@subdimension.ro>
