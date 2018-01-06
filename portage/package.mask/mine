@@ -1,0 +1,11 @@
+net-libs/courier-authlib
+virtual/mta
+app-text/openjade
+app-text/opensp
+#app-text/sgml-common
+#app-text/docbook-xml-dtd
+sys-apps/modutils
+sys-fs/udev
+>=sys-kernel/vanilla-sources-4.10.0
+>=sys-kernel/linux-headers-4.10.0
+

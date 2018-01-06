@@ -1,0 +1,97 @@
+
+www-servers/nginx -ssl -pcre http -vim-syntax
+sys-kernel/grsec-sources symlink
+sys-apps/shadow pam
+sys-apps/busybox static -pam
+sys-auth/pambase sha512
+sys-process/daemontools-scripts withsamplescripts
+dev-lang/python xml
+
+mail-mta/postfix sasl dovecot-sasl berkdb
+dev-libs/cyrus-sasl gdbm
+net-libs/courier-authlib berkdb gdbm
+net-mail/courier-imap gdbm
+net-mail/dovecot maildir berkdb
+
+dev-lang/python gdbm
+
+dev-db/sqlite threadsafe extensions
+
+sci-visualization/gnuplot gd
+media-libs/gd png
+
+net-p2p/rtorrent daemon color
+dev-vcs/git curl perl
+
+sys-apps/elfix xtpax
+dev-python/pypax xtpax
+
+
+net-misc/openvpn examples iproute2 passwordsave pkcs11 lzo
+dev-libs/openct usb
+dev-libs/opensc openct
+
+net-misc/dhcp server vim-syntax
+
+app-forensics/aide mhash static
+#net-misc/rsync -acl -ipv6 static
+
+x11-libs/cairo svg
+
+sys-apps/ipmitool openipmi
+sys-power/apcupsd usb
+
+net-misc/ntp -ipv6
+
+dev-vcs/cvs server
+sys-power/nut ssl usb ups_drivers_apcsmart ups_drivers_usbhid-ups 
+#dev-libs/libusb debug
+
+net-fs/samba client server netapi
+net-print/foomatic-filters cups
+net-print/gutenprint cups foomaticdb ppds
+dev-python/imaging scanner
+media-gfx/sane-backends usb
+
+net-fs/nfs-utils nfsv3 -ipv6
+net-fs/cifs-utils -acl
+
+sys-block/parted device-mapper
+
+net-libs/rb_libtorrent python
+dev-libs/boost python
+net-p2p/deluge webinterface
+
+
+app-crypt/ekeyd -usb
+dev-lang/lua deprecated
+sys-fs/lvm2 udev
+sys-fs/eudev hwdb
+
+sys-fs/cryptsetup -gcrypt openssl
+
+sys-libs/talloc python
+
+sys-apps/openrc netifrc
+
+sys-apps/coreutils xattr
+sys-libs/libselinux static-libs
+sys-apps/policycoreutils pam
+dev-libs/libpcre static-libs
+
+sys-process/fcron system-crontab
+sys-fs/eudev openrc
+
+net-ftp/lftp ssl openssl
+
+sys-apps/smartmontools minimal
+
+sys-apps/hwids usb net pci udev
+sys-apps/kmod tools
+
+sys-kernel/linux-firmware savedconfig
+
+sys-apps/net-tools arp hostname
+dev-libs/openssl asm
+
+net-misc/iputils openssl
