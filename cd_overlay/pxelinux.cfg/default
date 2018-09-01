@@ -13,9 +13,9 @@ MENU WIDTH 70
 MENU MARGIN 6
 
 label peter's livecd 64bit via http  (needs 500Mb ram)
-label simplexcd 64bit
+label tinycd 64bit
   kernel /isolinux/bzImage
-  append initrd=/isolinux/initramfs.igz root=/dev/ram0 init=/linuxrc looptype=squashfs cdroot net.ifnames=0 netboot=http://10.212.0.3/simplexcd/image.squashfs
+  append initrd=/isolinux/initramfs.igz root=/dev/ram0 init=/linuxrc looptype=squashfs cdroot net.ifnames=0 netboot=http://10.212.0.3/tinycd/image.squashfs
 
 label memtest86+
   kernel /isolinux/memtest86

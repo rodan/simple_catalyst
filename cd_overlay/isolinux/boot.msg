@@ -3,8 +3,8 @@
                   Peter's amd64+nomultilib LiveCD
 
 
-new versions can be downloaded from https://www.simplex.ro/en/livecd.html
-mail <petre.rodan@simplex.ro> for bug reports
+new versions can be downloaded from https://subdimension.ro
+mail <2b4eda@subdimension.ro> for bug reports
 
  'server'      - boots a server kernel (console)
  'server-vga'  - boots a server kernel (vga fb)
