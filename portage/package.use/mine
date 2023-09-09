@@ -1,97 +1,67 @@
 
-www-servers/nginx -ssl -pcre http -vim-syntax
-sys-kernel/grsec-sources symlink
 sys-apps/shadow pam
 sys-apps/busybox static -pam
 sys-auth/pambase sha512
 sys-process/daemontools-scripts withsamplescripts
-dev-lang/python xml
+dev-lang/python xml gdbm
 
-mail-mta/postfix sasl dovecot-sasl berkdb
-dev-libs/cyrus-sasl gdbm
-net-libs/courier-authlib berkdb gdbm
-net-mail/courier-imap gdbm
-net-mail/dovecot maildir berkdb
-
-dev-lang/python gdbm
-
-dev-db/sqlite threadsafe extensions
-
-sci-visualization/gnuplot gd
-media-libs/gd png
-
-net-p2p/rtorrent daemon color
 dev-vcs/git curl perl
 
-sys-apps/elfix xtpax
-dev-python/pypax xtpax
-
-
-net-misc/openvpn examples iproute2 passwordsave pkcs11 lzo
-dev-libs/openct usb
-dev-libs/opensc openct
-
-net-misc/dhcp server vim-syntax
-
-app-forensics/aide mhash static
-#net-misc/rsync -acl -ipv6 static
-
-x11-libs/cairo svg
-
 sys-apps/ipmitool openipmi
-sys-power/apcupsd usb
-
 net-misc/ntp -ipv6
-
-dev-vcs/cvs server
-sys-power/nut ssl usb ups_drivers_apcsmart ups_drivers_usbhid-ups 
-#dev-libs/libusb debug
-
-net-fs/samba client server netapi
-net-print/foomatic-filters cups
-net-print/gutenprint cups foomaticdb ppds
-dev-python/imaging scanner
-media-gfx/sane-backends usb
-
-net-fs/nfs-utils nfsv3 -ipv6
-net-fs/cifs-utils -acl
 
 sys-block/parted device-mapper
 
-net-libs/rb_libtorrent python
-dev-libs/boost python
-net-p2p/deluge webinterface
-
-
-app-crypt/ekeyd -usb
-dev-lang/lua deprecated
-sys-fs/lvm2 udev
-sys-fs/eudev hwdb
+sys-fs/lvm2 lvm -udev
 
 sys-fs/cryptsetup -gcrypt openssl
 
-sys-libs/talloc python
-
-sys-apps/openrc netifrc
-
 sys-apps/coreutils xattr
-sys-libs/libselinux static-libs
-sys-apps/policycoreutils pam
 dev-libs/libpcre static-libs
-
-sys-process/fcron system-crontab
-sys-fs/eudev openrc
-
-net-ftp/lftp ssl openssl
-
-sys-apps/smartmontools minimal
-
-sys-apps/hwids usb net pci udev
+sys-apps/smartmontools -caps minimal
 sys-apps/kmod tools
-
 sys-kernel/linux-firmware savedconfig
-
 sys-apps/net-tools arp hostname
 dev-libs/openssl asm
-
 net-misc/iputils openssl
+
+*/* PYTHON_TARGETS: -* -python3_10 python3_11
+*/* PYTHON_SINGLE_TARGET: -* python3_11
+
+app-portage/portage-utils qmanifest qtegrity
+sys-apps/portage native-extensions rsync-verify
+
+app-alternatives/awk gawk
+app-alternatives/lex flex
+app-alternatives/yacc bison
+app-alternatives/bc gnu
+app-alternatives/tar gnu
+app-alternatives/gzip reference
+app-alternatives/cpio gnu
+app-alternatives/bzip2 reference
+app-alternatives/sh bash
+
+dev-python/pypax xtpax
+sys-apps/elfix xtpax
+net-misc/curl adns ftp http2 openssl ssl
+
+sys-process/procps kill
+app-arch/xz-utils extra-filters
+dev-libs/libpcre2 bzip2 pcre16 pcre32 readline unicode verify-sig zlib
+net-libs/gnutls openssl
+sys-fs/e2fsprogs fuse tools
+sys-apps/file seccomp
+dev-libs/libgcrypt asm
+virtual/libcrypt static-libs
+sys-libs/libxcrypt static-libs
+sys-apps/iproute2 berkdb caps iptables
+sys-apps/util-linux caps logger ncurses readline
+app-arch/zstd lz4
+sys-libs/libcap pam
+dev-libs/nettle gmp
+sys-libs/gdbm berkdb
+virtual/libudev eudev
+app-text/mandoc system-man
+dev-libs/libsodium -verify-sig
+
+sys-devel/gcc hardened nptl -zstd cet fortran nls openmp sanitize

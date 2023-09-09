@@ -3,8 +3,8 @@ NAME
 	sc - a simple catalyst tool that is able to create a small livecd
 
 SYNOPSIS
-	sc --spec /local/sc/specs/livecd-tiny-stage1.spec
-	sc --spec /local/sc/specs/livecd-tiny-stage2.spec
+    bash sc --spec specs/livecd-tiny-stage1.spec
+    bash sc --spec specs/livecd-tiny-stage2.spec
 
       voila, the iso is ready.
 

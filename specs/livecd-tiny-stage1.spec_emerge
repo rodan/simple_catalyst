@@ -2,7 +2,6 @@ app-arch/bzip2
 app-arch/gzip
 app-arch/tar
 app-editors/vim
-app-misc/screen
 app-shells/bash
 net-analyzer/tcpdump
 net-analyzer/traceroute
@@ -22,7 +21,7 @@ sys-apps/findutils
 sys-apps/gawk
 sys-apps/grep
 sys-apps/hdparm
-sys-apps/hwdata-gentoo
+sys-apps/hwdata
 sys-apps/iproute2
 sys-apps/kbd
 sys-apps/less
@@ -47,7 +46,6 @@ sys-process/psmisc
 sys-apps/ipmitool
 sys-apps/dmidecode
 net-misc/ntp
-sys-apps/hwids
 net-misc/bridge-utils
 mail-mta/ssmtp
 sys-kernel/linux-firmware

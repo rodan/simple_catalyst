@@ -3,6 +3,7 @@
 /etc/eselect
 /lib/*.a
 /lib/modules
+/lib/systemd
 #/lib/udev
 /usr/bin/i386-pc*
 /usr/bin/yacc
@@ -30,8 +31,12 @@
 /usr/lib/gconv
 /usr/lib/portage
 /usr/lib/systemd
+/usr/lib/python-exec
+/usr/lib/python
+/usr/lib/python3.11
 /usr/lib64/python*
 /usr/lib64/libpython*
+/usr/lib/locale/locale-archive
 /usr/lib64/locale/locale-archive
 /usr/lib64/perl5
 /usr/lib64/pkgconfig
@@ -63,5 +68,4 @@
 /usr/bin/ntptrace
 /usr/bin/sntp
 /usr/bin/tickadj
-/var/log/*
 

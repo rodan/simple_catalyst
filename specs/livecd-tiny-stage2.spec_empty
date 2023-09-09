@@ -3,7 +3,7 @@
 /var/empty
 /var/cache
 /var/lock
-/tmp
+/var/log
 /usr/portage
 /usr/share/unimaps
 /usr/include

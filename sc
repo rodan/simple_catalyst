@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source_dir='/local/sc/source'
+prefix=$(pwd)
 
 . /etc/init.d/functions.sh
 
@@ -19,18 +19,18 @@ live_do_umount=false
 live_do_spec=false
 
 while (( "$#" )); do
-        if [ "$1" == "--spec" -o "$1" == "-s" ]; then
+        if [ "$1" == "--spec" ] || [ "$1" == "-s" ]; then
             shift;
             spec=$1
             live_do_spec=true
             shift;
-        elif [ "$1" == "--mount" -o "$1" == "-m" ]; then
+        elif [ "$1" == "--mount" ] || [ "$1" == "-m" ]; then
             live_do_mount=true
             shift;
-        elif [ "$1" == "--umount" -o "$1" == "-u" ]; then
+        elif [ "$1" == "--umount" ] || [ "$1" == "-u" ]; then
             live_do_umount=true
             shift;
-        elif [ "$1" == "--verbose" -o "$1" == "-v" ]; then
+        elif [ "$1" == "--verbose" ] || [ "$1" == "-v" ]; then
             set -x
             shift;
         else
@@ -43,8 +43,8 @@ done
     exit 1
 }
 
-. ${spec}
-. /local/sc/build/sc_functions.sh
+. "${spec}"
+. "${prefix}/src/sc_functions.sh"
 
 [ -z "${stage}" ] && {
 	echo 'stage not defined in the spec file, exiting'
@@ -52,18 +52,18 @@ done
 }
 
 ${live_do_mount} && {
-    mount_bind_start ${stage}
+    mount_bind_start "${stage}"
     trap : 0
     exit 0
 }
 
 ${live_do_umount} && {
-    mount_bind_stop ${stage}
+    mount_bind_stop "${stage}"
     trap : 0
     exit 0
 }
 
-mkdir -p "${tmp_dir}/${version_stamp}"
+mkdir -p "${build_dir}"
 unpack_portage
 
 if [ "${stage}" == "1" ]; then
