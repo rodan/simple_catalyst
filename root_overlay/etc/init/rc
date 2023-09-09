@@ -13,7 +13,7 @@ rc_sysinit() {
 	#/sbin/udevd /dev
 
 	ebegin 'mount filesystems'
-	#mount -t proc -o nosuid,noexec proc /proc
+	mount -t proc -o nosuid,noexec proc /proc
 	#mount -a
 	mount -o remount,rw /
 
